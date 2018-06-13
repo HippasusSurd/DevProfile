@@ -3,24 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="25dp">
 
     <ImageView
         android:id="@+id/banner"
-        android:layout_width="0dp"
-        android:layout_height="227dp"
+        android:layout_width="1280dp"
+        android:layout_height="172dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/devslopesbanner" />
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="176dp"
-        android:layout_height="181dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="156dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="128dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/devslopesprofilelogo" />
@@ -31,15 +33,18 @@
         android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="@+id/star"
         app:layout_constraintEnd_toStartOf="@+id/star"
+        app:layout_constraintHorizontal_bias="0.81"
         app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/star"
         app:srcCompat="@drawable/camerabutton" />
 
     <ImageView
         android:id="@+id/star"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
         app:layout_constraintBottom_toBottomOf="@+id/inbox"
         app:layout_constraintEnd_toStartOf="@+id/inbox"
         app:layout_constraintHorizontal_bias="0.5"
@@ -51,12 +56,39 @@
         android:id="@+id/inbox"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/star"
+        app:layout_constraintTop_toTopOf="@+id/button"
         app:srcCompat="@drawable/inboxbutton" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="178dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        android:text="DevSlopes"
+        android:textAllCaps="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/logo"
+        app:layout_constraintTop_toBottomOf="@+id/banner" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_button"
+        android:text="Customise Dashboard"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
@@ -70,13 +102,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:scaleType="centerCrop"
-        app:layout_constraintDimensionRatio="w,9:16"
+        app:layout_constraintDimensionRatio="16:9"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView15"
         app:layout_constraintTop_toBottomOf="@+id/logo"
         app:srcCompat="@drawable/dataimage" />
 
@@ -84,11 +114,10 @@
         android:id="@+id/imageView14"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="32dp"
         android:layout_marginStart="16dp"
         android:scaleType="centerCrop"
         app:layout_constraintDimensionRatio="16:9"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView16"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/imageView13"
         app:srcCompat="@drawable/imagesimage" />
@@ -97,14 +126,13 @@
         android:id="@+id/imageView15"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="16:9"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView13"
         app:srcCompat="@drawable/videosimage" />
 
@@ -112,43 +140,14 @@
         android:id="@+id/imageView16"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="16:9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/imageView14"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/codeimage" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="178dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="48dp"
-        android:text="DevSlopes"
-        android:textAllCaps="false"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/logo"
-        app:layout_constraintTop_toBottomOf="@+id/banner" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="200dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/rounded_button"
-        android:text="Customise Dashboard"
-        android:textAllCaps="false"
-        android:textColor="@android:color/background_light"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
 </android.support.constraint.ConstraintLayout>
